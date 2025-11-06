@@ -22,7 +22,8 @@ barchart <- ggplot(data, aes(x = GENDER_SMOKING, fill = LUNG_CANCER)) +
        y = "Count",
        fill = "Lung Cancer") +
   theme_minimal()
-
+# Ensure the folder exists before saving
+dir.create(here::here("charts"), showWarnings = FALSE, recursive = TRUE)
 ggsave(
   plot = barchart,
   , width = 8, height = 5, dpi = 300,

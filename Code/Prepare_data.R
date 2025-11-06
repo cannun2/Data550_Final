@@ -30,7 +30,8 @@ cols <- c("SMOKING", "YELLOW_FINGERS", "ANXIETY", "PEER_PRESSURE",
           "SWALLOWING.DIFFICULTY", "CHEST.PAIN")
 # Subtract 1 from each of the columns
 data[cols] <- lapply(data[cols], function(x) x - 1)
-
+# Ensure the folder exists before saving
+dir.create(here::here("Edited_data"), showWarnings = FALSE, recursive = TRUE)
 saveRDS(
   data, 
   file = here::here("Edited_data/Data_clean.rds")

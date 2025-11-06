@@ -12,7 +12,8 @@ Table_one <- data |>
   modify_spanning_header(c("stat_1", "stat_2") ~ "**Lung Cancer**") |>
   add_overall()
 
-
+# Ensure the folder exists before saving
+dir.create(here::here("tables"), showWarnings = FALSE, recursive = TRUE)
 saveRDS(
   Table_one,
   file = here::here("tables/Table_one.rds")

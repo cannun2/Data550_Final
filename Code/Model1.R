@@ -15,7 +15,10 @@ model <- glm(LUNG_CANCER ~ GENDER + AGE + SMOKING + COUGHING,
              family = binomial)
 
 regression_table <- tbl_regression(model)|>add_global_p()
+# Ensure the folder exists before saving
+dir.create(here::here("models"), showWarnings = FALSE, recursive = TRUE)
 saveRDS(
   regression_table,
   file = here::here("models/Model_one.rds")
 )
+
