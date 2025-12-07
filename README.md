@@ -3,7 +3,7 @@ To generate final report type make in the terminal after ensuring your working d
 This will use docker to create the report stored in the report folder.
 To make the report without using docker run make Lung_cancer_report.html instead. This report will not be in the report folder, but in the Data550_Final folder.
 
-##Create Docker Image
+## Create Docker Image
 To create the docker image type make docker in the terminal. Current image used: https://hub.docker.com/repository/docker/cannun2/final/tags/v3/sha256-af16c9e80a5a71519ed9c70b89c4a02bda031b585b5d6d6aaa8b6679b8e75ee5
 
 ## Synchronize packages
