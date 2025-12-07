@@ -2,6 +2,11 @@ here::i_am("Code/Model1.R")
 library(knitr)
 library(labelled)
 library(gtsummary)
+library(broom)
+library(broom.helpers)
+library(car)
+library(parameters)
+
 data <- readRDS(
   file = here::here("Edited_data/Data_clean.rds")
 )
